@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +24,24 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        final Button btEntrar = findViewById(R.id.btEntrar);
-        btEntrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Abrir a tela Home
-                Intent telaHome = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(telaHome);
-                finish();
-            }
-        });
+        final Button btCalculadora = findViewById(R.id.btCalculadora);
+        final Button btViagem = findViewById(R.id.btViagem);
+
+        btCalculadora.setOnClickListener(this);
+        btViagem.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.btCalculadora) {
+            // Abrir a tela Home (Opções à Calculadora)
+            final Intent telaHome = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(telaHome);
+        } else if (view.getId() == R.id.btViagem) {
+            // Abrir a tela Viagem
+            final Intent telaViagem = new Intent(MainActivity.this, TripActivity.class);
+            startActivity(telaViagem);
+        }
+        // finish(); // É possíveo agora retornar à Tela Inicial (MainActivity)
     }
 }

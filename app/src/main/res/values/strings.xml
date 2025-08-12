@@ -1,10 +1,19 @@
 <resources>
     <string name="app_name">Calculadora</string>
     <string name="titulo">Seja Bem-Vindo(a) ao Nosso App</string>
-    <string name="entrar">Entrar</string>
     <string name="calculadora">Calculadora</string>
     <string name="somar_numeros">Somar números</string>
     <string name="subtrair_numeros">Subtrair números</string>
     <string name="multiplicar_numeros">Multiplicar números</string>
     <string name="dividir_numeros">Dividir números</string>
+    <string name="viagem">Viagem</string>
+    <string name="digite_primeiro_numero">Digite o primeiro número</string>
+    <string name="digite_segundo_numero">Digite o segundo número</string>
+    <string name="calcular">Calcular</string>
+    <string name="voltar">Voltar</string>
+    <string name="limpar">Limpar</string>
+    <string name="custo_de_viagem">Custo de Viagem</string>
+    <string name="digite_distancia_km">Digite a distância em KM</string>
+    <string name="digite_valor_litro_combustivel">Digite o valor do litro de combustível</string>
+    <string name="digite_media_km_litro_combustivel">Digite a média de KM/Litro de combustível</string>
 </resources>

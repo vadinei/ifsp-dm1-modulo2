@@ -52,11 +52,9 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     private void calc() {
         final EditText etNumero1 = findViewById(R.id.etNumero1);
         final EditText etNumero2 = findViewById(R.id.etNumero2);
-
         final int numero1 = Integer.parseInt(etNumero1.getText().toString());
         final int numero2 = Integer.parseInt(etNumero2.getText().toString());
         int resultado = 0;
-
         switch (operacao) {
             case "Somar":
                 resultado = numero1 + numero2;
@@ -71,7 +69,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
                 resultado = numero1 / numero2;
                 break;
         }
-
         Toast.makeText(CalcActivity.this, String.format("Resultado: %d", resultado), Toast.LENGTH_LONG).show();
     }
 }

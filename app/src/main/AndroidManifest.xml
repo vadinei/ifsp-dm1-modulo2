@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dm1_modulo2">
         <activity
+            android:name=".TripActivity"
+            android:exported="false" />
+        <activity
             android:name=".CalcActivity"
             android:exported="false" />
         <activity

@@ -28,17 +28,26 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         final Button btSubtair = findViewById(R.id.btSubtrair);
         final Button btMultiplicar = findViewById(R.id.btMultiplicar);
         final Button btDividir = findViewById(R.id.btDividir);
+        final Button btVoltarCalculadora = findViewById(R.id.btVoltarCalculadora);
 
         btSomar.setOnClickListener(this);
         btSubtair.setOnClickListener(this);
         btMultiplicar.setOnClickListener(this);
         btDividir.setOnClickListener(this);
+        btVoltarCalculadora.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        final Intent telaCalc = new Intent(HomeActivity.this, CalcActivity.class);
+        if (view.getId() == R.id.btVoltarCalculadora) {
+            finish();
+        } else {
+            prepareCalc(view);
+        }
+    }
 
+    private void prepareCalc(View view) {
+        final Intent telaCalc = new Intent(HomeActivity.this, CalcActivity.class);
         if (view.getId() == R.id.btSomar) {
             telaCalc.putExtra("operacao", "Somar");
         } else if (view.getId() == R.id.btSubtrair) {
@@ -48,7 +57,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         } else if (view.getId() == R.id.btDividir) {
             telaCalc.putExtra("operacao", "Dividir");
         }
-
         startActivity(telaCalc);
     }
 }
