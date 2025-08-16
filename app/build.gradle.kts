@@ -7,7 +7,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.vadinei.dm1.modulo1"
+        applicationId = "com.vadinei.dm1.modulo2"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

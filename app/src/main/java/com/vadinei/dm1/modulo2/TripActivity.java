@@ -58,11 +58,11 @@ public class TripActivity extends AppCompatActivity implements View.OnClickListe
         final EditText etPrecoLitroCombustivel,
         final EditText etMediaQuilometroPorLitro
     ) {
-        if (etDistancia.getText() == null || etDistancia.getText().isEmpty()) {
+        if (etDistancia.getText() == null || etDistancia.getText().toString().isEmpty()) {
             etDistancia.requestFocus();
-        } else if (etPrecoLitroCombustivel.getText() == null || etPrecoLitroCombustivel.getText().isEmpty()) {
+        } else if (etPrecoLitroCombustivel.getText() == null || etPrecoLitroCombustivel.getText().toString().isEmpty()) {
             etPrecoLitroCombustivel.requestFocus();
-        } else if (etMediaQuilometroPorLitro.getText() == null || etMediaQuilometroPorLitro.getText().isEmpty()) {
+        } else if (etMediaQuilometroPorLitro.getText() == null || etMediaQuilometroPorLitro.getText().toString().isEmpty()) {
             etMediaQuilometroPorLitro.requestFocus();
         } else if (etMediaQuilometroPorLitro.getText().toString().equals("0")) {
             Toast.makeText(TripActivity.this, "Valor inválido à média de KM/Litro de combustível", Toast.LENGTH_LONG).show();
